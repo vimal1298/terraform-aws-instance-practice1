@@ -7,6 +7,7 @@ resource "aws_instance" "ec2_creation" {
   #availability_zone = var.availability_zone
 
   subnet_id = var.subnet_id_pub
+  key_name = "keypair1"
 
   tags = {
 
