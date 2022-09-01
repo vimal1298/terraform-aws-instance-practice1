@@ -4,7 +4,7 @@ resource "aws_instance" "ec2_creation" {
 
   instance_type = var.instance_type  #"t2.micro"
 
-  availability_zone = var.availability_zone
+  #availability_zone = var.availability_zone
 
   subnet_id = var.subnet_id_pub
 
