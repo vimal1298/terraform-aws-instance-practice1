@@ -53,3 +53,9 @@ output "public-ip" {
         command =  "echo ${aws_subnet.subnet_public.id} ,${vpc_id.vpc.id}, ${aws_instance.web.id} > allids.txt"
 
   }
+module "vpc-practice1" {
+  source  = "app.terraform.io/infosys-tfpractice1/vpc-practice1/aws"
+  version = "1.0.0"
+  # insert required variables here
+  subnet_id_pub = aws_subnet.public.id
+}
