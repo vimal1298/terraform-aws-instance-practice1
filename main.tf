@@ -7,7 +7,7 @@ resource "aws_instance" "ec2_creation" {
   #availability_zone = var.availability_zone
 
   subnet_id = var.subnet_id_pub
-  key_name = "keypair1"
+  key_name = "keyname"
 
   tags = {
 
@@ -31,7 +31,7 @@ resource "aws_instance" "ec2_creation" {
 
       user        = "ubuntu"
 
-      private_key = "${file("keypair1.pem")}"
+      private_key = "${file("keyname.pem")}"
 
     }
 
